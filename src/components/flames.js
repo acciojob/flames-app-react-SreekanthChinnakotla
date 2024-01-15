@@ -51,7 +51,7 @@ const FlamesGame = () => {
       <button data-testid="calculate_relationship" onClick={calculateFlames}>Calculate Relationship Future</button>
       <button data-testid="clear" onClick={clearResult}>Clear</button>
       <br />
-      {result && <h3 data-testid="answer">Result: {result}</h3>}
+      <h3 data-testid="answer">{result}</h3>
     </div>
   );
 };
