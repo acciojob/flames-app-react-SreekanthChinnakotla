@@ -40,18 +40,18 @@ const FlamesGame = () => {
       <h2>FLAMES Game</h2>
       <label>
         Name 1:
-        <input type="text" value={name1} onChange={(e) => setName1(e.target.value)} />
+        <input type="text" data-testid="input1" name='name1' value={name1} onChange={(e) => setName1(e.target.value)} />
       </label>
       <br />
       <label>
         Name 2:
-        <input type="text" value={name2} onChange={(e) => setName2(e.target.value)} />
+        <input type="text" name='name2' data-testid="input2" value={name2} onChange={(e) => setName2(e.target.value)} />
       </label>
       <br />
-      <button onClick={calculateFlames}>Calculate</button>
-      <button onClick={clearResult}>Clear</button>
+      <button data-testid="calculate_relationship" onClick={calculateFlames}>Calculate Relationship Future</button>
+      <button data-testid="clear" onClick={clearResult}>Clear</button>
       <br />
-      {result && <h1>Result: {result}</h1>}
+      {result && <h3 data-testid="answer">Result: {result}</h3>}
     </div>
   );
 };
